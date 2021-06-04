@@ -35,7 +35,8 @@ public class QuanLyNhanSu {
 		dsNhanSu.add(new TruongPhong("Hoàn", "113", 20, 300));
 		dsNhanSu.add(new TruongPhong("Khoa", "113", 20, 300));
 		
-		dsNhanSu.add(new GiamDoc("Phúc", "225", 20, 500));
+		dsNhanSu.add(new GiamDoc("Phúc", "225", 20, 450, 40));
+		dsNhanSu.add(new GiamDoc("Hiếu", "225", 20, 500, 60));
 	}
 
 	/* methods */
@@ -275,6 +276,35 @@ public class QuanLyNhanSu {
 		}
 		// in bottom
 		drawLine(width);
+	}
+	
+	public void giamDocCoCoPhanCaoNhat() {
+		List<GiamDoc> dsGiamDoc = new ArrayList<GiamDoc>();
+		GiamDoc giamDocNhieuCoPhanNhat;
+		
+		for(NhanSu ns : dsNhanSu) {
+			if(ns instanceof GiamDoc) dsGiamDoc.add((GiamDoc) ns);
+		}
+		giamDocNhieuCoPhanNhat = dsGiamDoc.get(0);
+		for(GiamDoc gd: dsGiamDoc) {
+			if(gd.getCoPhan() > giamDocNhieuCoPhanNhat.getCoPhan()) 
+				giamDocNhieuCoPhanNhat = gd;
+		}
+		drawLine(20);
+		System.out.printf("Giám đốc có lượng cổ phần cao nhất là %s, tổng cộng %.2f phần trăm\n",giamDocNhieuCoPhanNhat.getHoTen(), giamDocNhieuCoPhanNhat.getCoPhan());
+		drawLine(20);
+	}
+	
+	public void thuNhapCuaTungGiamDoc(double doanhThuCongTy) {
+		drawLine(20);
+		for(NhanSu ns : dsNhanSu) {
+			if(ns instanceof GiamDoc) {
+				double thuNhap = ((GiamDoc) ns).tinhLuong() + ((GiamDoc) ns).getCoPhan() * doanhThuCongTy;
+				System.out.printf("Thu nhập của giám đốc %s tháng này là %.2f\n",ns.getHoTen(), thuNhap);
+			};
+		}
+
+		drawLine(20);
 	}
 	
 	private void drawLine(int length) {

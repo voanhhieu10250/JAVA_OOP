@@ -7,13 +7,17 @@ public class CongTy {
 	private String maSoThue;
 	private double doanhThuThang;
 	
+	public double getDoanhThuThang() {
+		return doanhThuThang;
+	}
+	
 	public void nhapThongTin(Scanner sc) {
 		System.out.println("===NHẬP THÔNG TIN===");
 		System.out.print("Mã số công ty: ");
 		this.ten = sc.nextLine();
 		System.out.print("Tên công ty: ");
 		this.maSoThue = sc.nextLine();
-		System.out.print("Số điện thoại: ");
+		System.out.print("Doanh thu tháng: ");
 		this.doanhThuThang = Double.parseDouble(sc.nextLine());
 	}
 	

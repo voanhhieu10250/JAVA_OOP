@@ -98,9 +98,10 @@ public class QuanLyNhanSuConsole {
 				quanLyNhanSu.sortDescendingTheoluong();
 				break;
 			case 11: // Tìm Giám Đốc có số lượng cổ phần nhiều nhất
-				
+				quanLyNhanSu.giamDocCoCoPhanCaoNhat();
 				break;
 			case 12: // Tính và Xuất tổng THU NHẬP của từng Giám Đốc
+				quanLyNhanSu.thuNhapCuaTungGiamDoc(congTy.getDoanhThuThang());
 				break;
 			case 0:
 				System.out.println("Thank you.");

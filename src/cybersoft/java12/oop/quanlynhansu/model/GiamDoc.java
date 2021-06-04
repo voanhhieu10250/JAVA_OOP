@@ -5,14 +5,19 @@ import java.util.Scanner;
 public class GiamDoc extends NhanSu {
 	private float coPhan;
 	
-	public GiamDoc(String hoTen, String soDienThoai, float soNgayLam, float luongMotNgay) {
+	public GiamDoc(String hoTen, String soDienThoai, float soNgayLam, float luongMotNgay, float coPhan) {
 		super(hoTen, soDienThoai, soNgayLam, luongMotNgay);
 		// TODO Auto-generated constructor stub
+		this.coPhan = coPhan;
 	}
 	
 	
 	public GiamDoc() {
 		super();
+	}
+	
+	public float getCoPhan() {
+		return coPhan;
 	}
 	
 	@Override
