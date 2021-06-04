@@ -9,17 +9,17 @@ public class CongTy {
 	
 	public void nhapThongTin(Scanner sc) {
 		System.out.println("===NHẬP THÔNG TIN===");
-		System.out.print("Mã số: ");
+		System.out.print("Mã số công ty: ");
 		this.ten = sc.nextLine();
-		System.out.print("Họ tên: ");
+		System.out.print("Tên công ty: ");
 		this.maSoThue = sc.nextLine();
-		System.out.print("So dien thoai: ");
+		System.out.print("Số điện thoại: ");
 		this.doanhThuThang = Double.parseDouble(sc.nextLine());
 	}
 	
 	public void xuatThongTin() {
-		System.out.println("===XUẤT THÔNG TIN===");
-		System.out.printf("Tên công ty: %d\n", ten);
+		System.out.println("===XUẤT THÔNG TIN CÔNG TY===");
+		System.out.printf("Tên công ty: %s\n", ten);
 		System.out.printf("Mã số thuế: %s\n", maSoThue);
 		System.out.printf("Doanh thu tháng: %s\n",doanhThuThang);
 	}

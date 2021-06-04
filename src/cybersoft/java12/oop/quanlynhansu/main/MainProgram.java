@@ -13,9 +13,10 @@ import cybersoft.java12.oop.quanlynhansu.view.QuanLyNhanSuConsole;
 
 public class MainProgram {
 	public static void main(String[] args) {
-		QuanLyNhanSuConsole quanLyNhanSu = new QuanLyNhanSuConsole();
+		QuanLyNhanSuConsole quanLyNhanSuConsole = new QuanLyNhanSuConsole();
 		
-		quanLyNhanSu.start();
+		quanLyNhanSuConsole.start();
+		
 		
 ////		NhanSu nhanSu = new NhanSu();
 //		NhanVien nhanVien = new NhanVien();

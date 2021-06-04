@@ -5,22 +5,36 @@ import java.util.Scanner;
 public class TruongPhong extends NhanSu {
 	private int soNhanVien;
 	
+	public TruongPhong(String hoTen, String soDienThoai, float soNgayLam, float luongMotNgay) {
+		super(hoTen, soDienThoai, soNgayLam, luongMotNgay);
+		// TODO Auto-generated constructor stub
+	}
+
+	public TruongPhong() {
+		super();
+	}
+	
 	public int getSoNhanVien() {
 		return this.soNhanVien;
 	}
 	
 	/* methods */
+	public void tangSoNhanVien() {
+		this.soNhanVien += 1;
+	}
+	
+	public void giamSoNhanVien() {
+		this.soNhanVien -= 1;
+	}
 	
 	// Override phương thức tinhLuong() ở lớp NhanSu
 	@Override
 	public float tinhLuong() {
-		System.out.println("Phương thức tính lương ở lớp Trưởng Phòng");
 		return super.tinhLuong() + soNhanVien * 100;
 	}
 	
 	@Override
 	public void nhapThongTin(Scanner sc) {
-		System.out.println("Phuong thuc nhap thong tin o lop TruongPhong");
 		super.nhapThongTin(sc);
 		System.out.print("So nhan vien: ");
 		this.soNhanVien = Integer.parseInt(sc.nextLine());
@@ -28,13 +42,17 @@ public class TruongPhong extends NhanSu {
 	
 	@Override
 	public void xuatThongTin() {
-		System.out.println("Phuong thuc xuat thong tin o lop TruongPhong");
 		super.xuatThongTin();
 		System.out.printf("So nhan vien: %s\n", soNhanVien);
 	}
 	
 	@Override
 	public String getChucVu() {
-		return "Nhan Vien";
+		return "Truong Phong";
+	}
+	@Override
+	public String getThongTinThem() {
+		// TODO Auto-generated method stub
+		return String.valueOf(this.soNhanVien);
 	}
 }

@@ -5,6 +5,16 @@ import java.util.Scanner;
 public class GiamDoc extends NhanSu {
 	private float coPhan;
 	
+	public GiamDoc(String hoTen, String soDienThoai, float soNgayLam, float luongMotNgay) {
+		super(hoTen, soDienThoai, soNgayLam, luongMotNgay);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	public GiamDoc() {
+		super();
+	}
+	
 	@Override
 	public void nhapThongTin(Scanner sc) {
 		System.out.println("Phuong thuc nhap thong tin o lop GiamDoc");
@@ -23,5 +33,10 @@ public class GiamDoc extends NhanSu {
 	@Override
 	public String getChucVu() {
 		return "Giam Doc";
+	}
+	@Override
+	public String getThongTinThem() {
+		// TODO Auto-generated method stub
+		return String.valueOf(this.coPhan);
 	}
 }
